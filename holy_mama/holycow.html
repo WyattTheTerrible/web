@@ -16,7 +16,25 @@
         <option value = "Overcast">Overcast damnit</option>
     </select>
     <script>
-        const select = document.querySelector('select')
+        const select = document.querySelector("select");
+        const para = document.querySelector("p");
+        select.onchange = setWeather;
+        function setWeather(){
+        const choice = select.value;
+        if (choice === "Sunny"){
+            para.textContent = "Its nice and sunny"
+        }
+        else if(choice === "Rainy"){para.textContent = "Rain is falling"}
+        else if(choice === "Snowing"){para.textContent = "Snow is falling"}
+        else if(choice === "Overcast"){para.textContent = "Its fuggin cloudy"}
+        else {para.textContent = ""}
+        };
+    
+    
+    
+    
+    
+    
     </script>
 
     
